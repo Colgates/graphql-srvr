@@ -1,31 +1,8 @@
 
-const { ApolloServer, gql } = require('apollo-server')
+const { ApolloServer, } = require('apollo-server')
 const { ApolloServerPluginLandingPageGraphQLPlayground } = require('apollo-server-core')
-const { users } = require('./src/users')
-
-const typeDefs = gql`
-
-    type User {
-        id: Int!
-        first_name: String!
-        last_name: String!
-        gender: String!
-        email: String!
-        password: String!
-        ip_address: String!
-        job_title: String!
-    }
-
-    type Query {
-        users: [User]
-    }
-`
-
-const resolvers = {
-    Query: {
-        users: () => users
-    }
-}
+const { typeDefs } = require('./src/schema')
+const { resolvers } = require('./src/resolvers')
 
 const server = new ApolloServer({
     typeDefs, 
