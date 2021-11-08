@@ -1,6 +1,6 @@
 # graphql-srvr
-![screenshot](/screenshot.webp)
-# Description
+
+## Description
 It was very inconvinient looking for the right API for testing purposes. So it's better to have your own server deployed on some cloud platform, which is heroku in my case 
 
 ## Built With
